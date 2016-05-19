@@ -12,7 +12,7 @@ import javax.ws.rs.Produces;
  * @author upadhs5
  *
  */
-@Path("/")
+
 public class HelloWorld {
 
 	@Inject

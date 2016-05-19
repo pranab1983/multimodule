@@ -97,6 +97,19 @@
 			<artifactId>jboss-jaxrs-api_2.0_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+		
 	</dependencies>
 
 
@@ -150,6 +163,17 @@
 						</configuration>
 					</plugin>
 				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>alternateBuildDir</id>
+			<activation>
+				<property>
+					<name>alt.build.dir</name>
+				</property>
+			</activation>
+			<build>
+				<directory>${alt.build.dir}</directory>
 			</build>
 		</profile>
 	</profiles>
